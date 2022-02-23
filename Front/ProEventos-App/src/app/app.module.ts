@@ -1,5 +1,5 @@
+import { ContatosComponent } from './components/contatos/contatos.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
-import { EventoService } from './services/evento.service';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
@@ -14,19 +14,28 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
-import { NavComponent } from './nav/nav.component';
+import { EventoService } from './services/evento.service';
+
+import { NavComponent } from './shared/nav/nav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
-import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { EventosComponent } from './components/eventos/eventos.component'
+import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TituloComponent } from './shared/titulo/titulo.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+      AppComponent,
       EventosComponent,
       PalestrantesComponent,
+      ContatosComponent,
+      DashboardComponent,
+      PerfilComponent,
       NavComponent, 
-      DateTimeFormatPipe
+      DateTimeFormatPipe,
+      TituloComponent
    ],
   imports: [
     BrowserModule,
